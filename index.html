@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Intent Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+    <div id="maker-modal" class="modal hidden">
+        <div class="modal-content">
+            <p>~$ Built by web3yohan.</p>
+            <p class="subtext">Drop a follow for more Web3 tools.</p>
+            <div class="modal-actions">
+                <a href="https://x.com/intent/follow?screen_name=web3yohan" target="_blank" class="btn btn-blue" id="modal-follow-btn">Follow @web3yohan</a>
+                <button class="btn btn-ghost" id="modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>INTENT_GEN</h1>
+            <p class="subtitle">Paste an X/Twitter link. Extract intents instantly.</p>
+        </header>
+
+        <div class="input-group">
+            <span class="prefix">~$</span>
+            <input type="text" id="url-input" placeholder="https://x.com/username/status/123..." autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="results-container hidden" id="results-container">
+            <div class="intent-row" id="row-follow">
+                <span class="intent-label">[ FOLLOW ]</span>
+                <input type="text" class="intent-output" id="out-follow" readonly>
+                <button class="copy-btn" data-target="out-follow">COPY</button>
+            </div>
+
+            <div class="intent-row" id="row-like">
+                <span class="intent-label">[ LIKE ]</span>
+                <input type="text" class="intent-output" id="out-like" readonly>
+                <button class="copy-btn" data-target="out-like">COPY</button>
+            </div>
+
+            <div class="intent-row" id="row-reply">
+                <span class="intent-label">[ REPLY ]</span>
+                <input type="text" class="intent-output" id="out-reply" readonly>
+                <button class="copy-btn" data-target="out-reply">COPY</button>
+            </div>
+
+            <div class="intent-row" id="row-retweet">
+                <span class="intent-label">[ RETWEET ]</span>
+                <input type="text" class="intent-output" id="out-retweet" readonly>
+                <button class="copy-btn" data-target="out-retweet">COPY</button>
+            </div>
+
+            <div class="intent-row" id="row-quote">
+                <span class="intent-label">[ QUOTE ]</span>
+                <input type="text" class="intent-output" id="out-quote" readonly>
+                <button class="copy-btn" data-target="out-quote">COPY</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
