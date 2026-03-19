@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Intent Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+    <div id="maker-modal" class="modal hidden">
+        <div class="modal-content">
+            <p>Built by yohan.</p>
+            <p class="subtext">Follow for more Web3 tools.</p>
+            <div class="modal-actions">
+                <a href="https://x.com/intent/follow?screen_name=web3yohan" target="_blank" class="btn btn-blue" id="modal-follow-btn">Follow @web3yohan</a>
+                <button class="btn btn-ghost" id="modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="header-top">
+                <h1>INTENT_GEN</h1>
+                <button id="theme-toggle" class="theme-btn">☀️</button>
+            </div>
+            <p class="subtitle">Select an action.Paste your username or post link to get your intent.</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-target="sec-follow">Follow</button>
+            <button class="tab-btn" data-target="sec-like">Like</button>
+            <button class="tab-btn" data-target="sec-repost">Repost</button>
+            <button class="tab-btn" data-target="sec-reply">Reply</button>
+            <button class="tab-btn" data-target="sec-quote">Quote / Post</button>
+        </div>
+
+        <div class="sections-container">
+            
+            <div class="intent-section active" id="sec-follow">
+                <div class="input-group">
+                    <label>Type or paste Username (without @)</label>
+                    <input type="text" id="in-follow-user" class="terminal-input" placeholder="e.g. web3yohan" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="intent-section hidden" id="sec-like">
+                <div class="input-group">
+                    <label>X Post URL</label>
+                    <input type="text" id="in-like-url" class="terminal-input" placeholder="Paste the post link..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="intent-section hidden" id="sec-repost">
+                <div class="input-group">
+                    <label>X Post URL</label>
+                    <input type="text" id="in-repost-url" class="terminal-input" placeholder="Paste the post link..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="intent-section hidden" id="sec-reply">
+                <div class="input-group">
+                    <label>Compose Reply</label>
+                    <textarea id="in-reply-text" class="terminal-input" rows="3" placeholder="Write your reply here..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label>Replying to (X Post URL)</label>
+                    <input type="text" id="in-reply-url" class="terminal-input" placeholder="Paste the target post link..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="intent-section hidden" id="sec-quote">
+                <div class="input-group">
+                    <label>Compose Post</label>
+                    <textarea id="in-quote-text" class="terminal-input" rows="3" placeholder="Write your post..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label>URL to Quote / Attach (Optional)</label>
+                    <input type="text" id="in-quote-url" class="terminal-input" placeholder="Paste a post or website link..." autocomplete="off">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="output-container">
+            <span class="prefix">></span>
+            <input type="text" class="final-output" id="final-output" readonly placeholder="Generated URL will appear here">
+            <button class="copy-btn" id="main-copy-btn">COPY</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
