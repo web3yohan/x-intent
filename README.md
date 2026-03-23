@@ -14,21 +14,15 @@ An intent link bypasses this. Clicking it deep-links directly into the X app (or
 * **Full Intent Suite:** Generates `Follow`, `Like`, `Reply`, `Retweet`, and `Quote` intents in real-time.
 * **API-Free:** Uses official, open X Web Intents. Safe, secure, and doesn't require users to connect their accounts to a third party.
 * **"Vibe Code" UI:** Strict dark-mode, minimal styling, monospace typography, and one-click copy feedback.
-
-## Setup
-No `npm install` or build steps required. 
-1. Clone the repo.
-2. Open `index.html` in your browser.
-3. Host instantly on GitHub Pages, Vercel, or Netlify.
-
+  
 ## FAQs
 
 **Do I need an X Developer account?**
-No. Web intents are public URL schemas provided by X. No API keys or authentication required from the host.
+> No. Web intents are public URL schemas provided by X. No API keys or authentication required from the host.
 
 **Does it work on Mobile?**
-Yes. Intent links are specifically designed to trigger deep links into the native iOS/Android X app, providing the smoothest UX possible.
+> Yes. Intent links are specifically designed to trigger deep links into the native iOS/Android X app, providing the smoothest UX possible.
 
 **How does the Quote intent work?**
-X doesn't have a dedicated `/quote` endpoint. This tool constructs a standard tweet intent and appends the target post URL as an encoded parameter, which natively renders as a Quote Tweet draft.
+> X doesn't have a dedicated `/quote` endpoint. This tool constructs a standard tweet intent and appends the target post URL as an encoded parameter, which natively renders as a Quote Tweet draft.
 
